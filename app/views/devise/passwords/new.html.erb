@@ -1,0 +1,46 @@
+    <div class="container-user">
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <div class="logo">
+          <%= image_tag("authorship-logo.png", :alt => "Authorship") %>
+          <div class="get-an-account">Recover your password</div>
+        </div>
+
+  <%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+  <%- end -%>  
+
+        <div class="form-control">
+          <input type="text" placeholder="Email" name="user[email]" data-validation="email">
+        </div>
+        <div class="call-to-action">
+          <button type="submit">Recover password</button>
+        </div>
+        
+        <div class="p-t-20 p-b-10">
+          <p>Or</p>
+        </div>
+
+        <div>
+          <div class="call-to-action">
+          <%= link_to("Login", "/users/sign_in", :method => :get) %>
+          </div>
+
+          <div class="call-to-action">
+          <%= link_to("Register", "/users/sign_up", :method => :get) %>
+          </div>
+        </div>
+
+
+      <% end %>
+    </div>
+
+    <%= javascript_include_tag "application" %>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $.validate({
+           lang: 'en'
+         });
+      });
+    </script>
+

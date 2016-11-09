@@ -1,0 +1,54 @@
+    <div class="container header">
+      <div class="col-md-12 col-sm-12 logo">
+          <%= image_tag("authorship-logo40x40.png", :border=>0, :class => 'img-responsive center-block') %>
+      </div>
+    </div>
+    <div class="container middle">
+      <div class="col-md-12">
+        <h1 class="title">You can use Metrics:</h1>
+      </div>
+
+      <div class="col-md-8 col-md-offset-2 col-sm-12 brands">
+        <!--
+        <div class="col-md-6 col-sm-12">
+          <h5>Using our</h5>
+          <h4>Web Aplication:</h4>
+
+          <%= link_to image_tag("Authorship-tags2.png", :class => 'img-responsive center-block'), "/tags" %>  
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <h5>Using our</h5>
+          <h4>Wordpress Extension:</h4>
+          <button id="wordpress" class="get-tool-button"><%=image_tag("wordpress.png", :class => 'img-responsive center-block') %></button>   
+
+        </div>
+       -->
+        <div class="col-md-12">
+          <h5>Using our</h5>
+          <h4>Google Chrome App:</h4>
+          <button id="chrome" class="get-tool-button"><%=image_tag("chrome.png", :class => 'img-responsive center-block') %></button>   
+        </div>
+
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 footer">
+        <hr>
+        Authorship all rights reserved
+      </div>
+    </div>
+
+<p id="APIloginField" class="hide"> <%= getLogin %> </p>
+<a id="downloadLink" href=<%= root_path << 'download/download.zip' %> type="application/zip" download="authorship-tags.zip"></a>
+ <%= javascript_include_tag "application" %>  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83678650-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Authorship - Metrics</title>
+    <!--metas -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Writer self-controll tool download page">
+    <meta name="keywords" content="Writer, metrics, download">
+    <meta name="author" content="Authorship">
+    <%= csrf_meta_tags %>
+
+    <%= favicon_link_tag 'authorship.ico' %>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <%= javascript_include_tag "modernizr.custom.js" %>
+     <%= stylesheet_link_tag "application-main", media: "all" %>
+  </head>
+
+  <body>
+      <%= yield %>
+  </body>
+</html>

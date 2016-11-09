@@ -1,0 +1,49 @@
+    <div class="container-user">
+    <p id="StripeErrorMessage"> </p>
+    <%= form_for(resource, as: "stripeForm", url: "payment") do |f| %>      
+        <div class="logo">
+          <%= image_tag("authorship-logo.png", :alt => "Authorship") %>
+          <div class="get-an-account">Get an Authorship.me membership</div>
+        </div>
+        <div class="payment">
+          <div class="monthly">
+            <a href="#"><h1> $4.99</h1><p>Monthly</p></a>
+          </div>
+          <div class="yearly selected">
+            <a href="#"><h1>$39.99</h1><p>Yearly</p></a>
+          </div>
+          <input type="hidden" name="price" id="membership-price" value="$39.99">
+        </div>
+        <div class="form-control">
+          <input type="text" placeholder="Card number"  data-validation="required" data-stripe="number">
+        </div>
+
+        <div class="form-control">
+          <input type="text" placeholder="Cardholder name"  data-validation="required" data-stripe="name">
+        </div>
+        <div class="form-control">
+          <input type="text" class="cvv" placeholder="CVC" data-validation="required" data-stripe="cvc" title="these 3 numbers can be found behind your card">
+          <input type="text" class="expiration-date" placeholder="MM/YY"  data-validation="required" data-stripe="exp">
+        </div>
+        <input type="hidden" name="stripe_card_token">
+        <div class="call-to-action">
+          <button type="submit">Buy a subscription</button>
+        </div>
+
+        <div class="existing-user">
+          <a href="index.html">Home</a>
+        </div>
+      <% end %>
+    </div>
+
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <%= javascript_include_tag "application" %>
+    <script type="text/javascript">
+      $(document).ready(function(){
+       Stripe.setPublishableKey(  "<%= ENV['PUBLISHABLE_KEY'] %>" );
+        $.validate({
+           lang: 'en'
+         });
+      });
+    </script>
+

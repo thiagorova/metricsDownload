@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #666666;
+    text-align: center;
+  }
+.logo-img{
+  display: block;
+  width: 40px;
+  margin: 0 auto;
+}
+.logo{
+  margin-top: 30px;
+}
+
+.title {
+  margin-left: 32px;
+}
+
+.middle{
+  padding: 60px;
+  margin-top: 60px;
+}
+.brands{
+  margin-top: 60px;
+}
+
+.footer {
+  margin-top: 30px;
+    font-size: 12px;
+    text-align: center;
+    color: #c5cdcb;
+}
+
+.get-tool-button {
+  background: none;
+  outline:none;
+  border:none;
+}
