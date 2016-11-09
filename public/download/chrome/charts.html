@@ -1,0 +1,40 @@
+      <header>
+        	<button ng-click="createProject()" ui-sref="create" class="btn"> New Project</button>
+    	<img src="img/metrics_logo.png">
+    </header>
+
+<div ng-controller="chartsController" id="project-view" class="view container">
+  <button class="btn right btn-primary backButton" ui-sref="projects">Back</button>
+  <h4 class="viewTitle">{{dProject.projectName}}</h4>
+  <div id="projectView" class="view">
+  
+  <div id="projectInfo">
+    <div class="info">
+      <p>{{dProject.time}}h</p>
+      <span class="legend">TIME SPENT</span>
+    </div>
+    <div class="info">
+      <p>{{dProject.words}}</p>
+      <span class="legend">WORDS</span>
+    </div>
+    <div class="info">
+      <p>{{dProject.milestone.percentage}}%</p>
+      <span class="legend">COMPLETED</span>
+    </div>
+       <div class="info">
+      <p>{{dProject.milestone.words || dProject.milestone.deadline.replace("/20", "/")}}</p>
+      <span class="legend">MILESTONE</span>
+    </div>
+  </div>
+  <div id="graph"> </div>
+  <div id="controls">
+    <button class="btn btn-primary" id="start" ng-click="startMeasuring()" ><img src="img/start.png">Start</button>
+    <button class="btn btn-primary" id="pause" ng-click="stopMeasuring()" ><img src="img/pause.png">Pause</button>
+<!--    <button class="btn btn-primary" id="stop" ng-click="stopMeasuring()" ><img src="img/stop.png">Finish</button> -->
+  </div>
+  </div>
+</div>
+
+<!-- this should be the last thing the html file -->
+  <script src="js/graph.js"></script>
+</div>

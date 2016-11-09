@@ -1,0 +1,55 @@
+      <header>
+    	<img src="img/metrics_logo.png">
+    </header>
+
+<div class="container col-md-12 col-sm-12 col-xs-12" ng-controller = "createController as create">
+     <button class="btn right btn-primary backButton" ui-sref="projects">Back</button>
+      <h4 class="viewTitle">Create Project</h4>
+      <div class="col-md-12 col-xs-12">
+        <div class="cpj-form col-md-10 col-md-offset-1 col-xs-12">
+          <form name="form">
+            <div class="form-group">
+              <label for="project-title">Title</label>
+              <input type="text" class="form-control" ng-model="project.projectName" name="projectName">
+              <div class="bg-danger" ng-show="form.projectName.$touched && !nameValidation(project.projectName)">
+                <span class="glyphicon glyphicon-exclamation-sign"></span>  Empty field
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="total-words">Total number of words</label>
+              <input type="number" class="form-control" ng-model="project.totalWords" ng-change="printWDays()" name="totalWords">
+              <div class="bg-danger" ng-show="form.totalWords.$touched && !numberValidation(project.totalWords)">
+                <span class="glyphicon glyphicon-exclamation-sign"></span>  Please, put a number greater than 0.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="milestone">Milestone</label>
+              <select class="form-control" name="milestone" ng-model="project.selectMilestone" ng-change="printWDays()">
+                <option value="none" ng-selected="true">choose the type of milestone you want</option>
+                <option value="wDay">Words per Day</option>
+                <option value="wMonth">Words per Month</option>
+                <option value="deadline">Deadlines</option>
+              </select>
+            </div>
+              <div class="form-group" ng-hide="datepickerShow">
+                <label for="many-words">{{period}} ? </label>
+                <input type="number" class="form-control" ng-model="project.milestoneMeasure" ng-change="printWDays()" name="milestoneMeasure">
+                <div class="bg-danger" ng-show="form.milestoneMeasure.$touched && !numberValidation(project.milestoneMeasure)">
+                  <span class="glyphicon glyphicon-exclamation-sign"></span> Please, put a number greater than 0.
+                </div>
+              </div>
+              <div class="form-group" ng-show="datepickerShow">
+                <label for="deadline">{{period}} ? </label>
+                <input type="date" class="form-control" ng-model="project.deadline" ng-change="printWDays()" name="deadline">
+                <div class="bg-danger" ng-show="form.deadline.$touched && !dateValidation(project.deadline)">
+                  <span class="glyphicon glyphicon-exclamation-sign"></span> Invalid date.
+                </div>
+              </div>
+              <span id="output">{{output}}</span>
+              <div class="center btn-div col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                <button class="btn btn-primary btn-block" ng-model="page" ng-click="addProject()" ng-disabled="disable()">Create Project</button>
+              </div>
+          </form>
+        </div>
+      </div>  
+</div>

@@ -25,10 +25,13 @@ class DownloadsController < ApplicationController
   end
 
   def addApiKey(tool, key, path)
-    filename = path + "/js/main.js"
-    text = File.read(filename)
-    new_contents = text.gsub(/replace_this_text_with_you_API_key/, key)
-    File.open(filename, "w") {|file| file.puts new_contents }
+    files = [path + "/js/getTexts.js", path + "/js/metrics.js"]
+    files.each do |filename|
+      puts filename
+      text = File.read(filename)
+      new_contents = text.gsub(/replace_this_text_with_you_API_key/, key)
+      File.open(filename, "w") {|file| file.puts new_contents }
+    end
   end
   
   def compress(folder, zipPath)

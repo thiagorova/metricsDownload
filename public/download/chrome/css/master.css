@@ -1,0 +1,294 @@
+*{
+    color: #999;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  width: 456px;
+}
+
+ui-view {
+  height: 356px;
+}
+
+.projects-view{
+  overflow-y: scroll;
+   height:inherit;
+}
+
+.container{
+  background-color: #f3f3f3;
+}
+
+.projects-container h3, h4{
+  text-align: center;
+  color: #808080;
+  font-weight: 100;
+}
+
+.circle{
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+.icon-success{
+  background-color:#80b984;
+}
+.icon-ok{
+  background-color: #4f81ae;
+}
+.icon-danger{
+  background-color: #cb8184;
+}
+label{
+  font-weight: 100;
+}
+.cpj-form input, select{
+  background-color: #e5e5e5 !important;
+}
+.btn-div{
+  margin-top: 25px;
+  padding-bottom: 25px;
+}
+.btn{
+  background-color: #1AA7B5;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 0;
+}
+
+.btn:hover{
+  background-color: #147D88;
+}
+.form-group{
+  padding: 5px;
+}
+
+.btn-primary {
+  background-color: #E5E5E5;
+  color: #999999;
+  padding: 10px 15px 10px 15px;
+}
+
+.btn-project-name{
+  border:none;
+  background: none;
+  padding: 25px;
+  outline:none;
+}
+
+.projects-table tr{
+  border-bottom: 1px solid #C5CDCB;
+  border-top: 1px solid #C5CDCB;
+}
+.projects-table tr:hover{
+  background-color: #eaeaea;
+}
+.projects-table tr:last-child{
+  border-top: 1px solid #C5CDCB;
+  border-bottom: none;
+}
+.td-project-name{
+
+}
+.projects-table .info{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.projects-table .info p{
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+.projects-table .info span{
+  font-size: 8pt;
+  color: #999;
+}
+
+.hLine {
+  fill: none;
+  stroke: #C5CDCB;
+  stroke-width: 1.5px;
+}
+
+.axis--x path {
+
+}
+
+.axis--x path {
+
+}
+
+.line {
+  fill: none;
+  stroke: #1AA7B5;
+  stroke-width: 1.5px;
+}
+
+.axis-text {
+}
+
+header {
+  margin-bottom: 20px;
+  height: 66px;
+}
+
+header img {
+  display: inline-block;
+}
+
+header button {
+  float: right;
+  background-color: #1AA7B5;
+  border: none;
+  color: white;
+  margin: 16px 30px 18px 10px; !important
+  cursor:pointer;
+}
+
+header button:hover {
+  color:white !important;
+}
+
+.info {
+  display: inline-block;
+  border-right: 1px solid;
+  border-color: #C5CDCB;
+  padding: 0px 15px 0px 15px;
+}
+
+.info:last-child {
+  border-right: none;
+}
+
+.info p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 15pt;
+}
+
+.info span {
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+.legend {
+  color: #C5CDCB;
+}
+
+.viewTitle {
+  color: #999999;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.backButton {
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 5px 15px 5px 15px;
+}
+
+#project-view {
+  text-align:center;
+  min-height: 356px;
+}
+
+#controls {
+  margin-bottom: 10px;
+}
+
+#graph + #controls > h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: -250px;
+  font-size: 11pt;
+}
+
+:not(#graph) + #controls > h2{
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: -250px;
+  font-size: 11pt;
+}
+
+#controls button {
+  margin-right: 25px;
+}
+
+#controls button img {
+  margin-right: 5px;
+}
+
+.icon-attention{
+  background-color: #f2f302;
+}
+
+.right {
+  float: right;
+}
+
+
+.empty-page{
+  text-align: center;
+  background-color: #f3f3f3;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.empty-page h1{
+    margin: 5px;
+}
+.empty-page{
+  padding-top: 20px;
+}
+.empty-page h2{
+  margin: 5px;
+  font-size: 26px;
+}
+.empty-page h3{
+  margin-top: 5px;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.empty-page span{
+  color: #1AA7B5;
+  font-size: 50px;
+}
+
+.empty-page p{
+  margin: 0px;
+}
+.empty-page .btn{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.bg-danger{
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.glyphicon.spinning {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+#pause {
+  display: none;
+}

@@ -1,0 +1,97 @@
+.hLine {
+  fill: none;
+  stroke: #C5CDCB;
+  stroke-width: 1.5px;
+}
+
+.axis--x path {
+
+}
+
+.axis--x path {
+
+}
+
+.line {
+  fill: none;
+  stroke: #1AA7B5;
+  stroke-width: 1.5px;
+}
+
+.axis-text {
+}
+
+svg {
+  background-color: #F5F5F5;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  width: 26.8%;
+}
+
+header h1 {
+  color: #1AA7B5;
+  margin-bottom: 0px;
+  padding: 0px;
+  margin-top: 15px;
+  font-size: 25pt;  
+}
+
+header span {
+  color: #C5CDCB;
+  margin-left: 2em;
+}
+
+header button {
+  float: right;
+  background-color: #1AA7B5;
+  border: none;
+  color: white;
+  margin-bottom: 18px;
+  padding: 10px;
+  margin-top: -27px;
+}
+
+.info {
+  display: inline-block;
+  border-right: 1px solid;
+  border-color: #C5CDCB;
+  padding: 0px 15px 0px 15px; 
+  font-family: 'Oxygen', sans-serif;
+}
+
+.info:last-child {
+  border-right: none;
+  
+}
+
+.info p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 15pt;
+}
+
+.info span {
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+.legend {
+  color: #C5CDCB;
+}
+
+.view {
+  background-color: #F5F5F5;
+  display: inline-block;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.viewTitle {
+  color: #666;
+}
+
+#projectView {
+  text-align:center;
+}

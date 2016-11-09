@@ -1,0 +1,35 @@
+    <header>
+        	<button ng-click="createProject()" ui-sref="create" class="btn"> New Project</button>
+    	<img src="img/metrics_logo.png">
+    </header>
+
+<div class="projects-view container col-md-12 col-xs-12" ng-controller="projectsController" ng-init="setSystem()">
+  <h4 class="viewTitle">Your Projects</h4>
+  <div ng-show="loading">
+    <span class="glyphicon glyphicon-refresh spinning"></span>  Loading...
+  </div>
+  <div class="col-md-12 col-xs-12">
+    <table class="col-md-12 col-xs-12 projects-table" id="projectInfo">
+        <tr ng-repeat="projects in projectsListView">
+        <td class="">
+          <div ng-class="projectStatus(projects)"></div>
+        </td>
+        <td class="td-project-name">
+          <button type="button" class="btn-project-name" ng-click="sendProject(projects) " ui-sref="charts">{{projects.projectName}}</button>
+        </td>
+        <td class="info">
+          <p>{{projects.milestone.percentage}}%</p>
+          <span>COMPLETE</span>
+        </td>
+        <td class="info">
+          <p>{{projects.words}}</p>
+          <span>WORDS</span>
+        </td>
+        <td class="info">
+          <p>{{projects.milestone.words || projects.milestone.deadline.replace("/20", "/")}}</p>
+          <span>{{(projects.milestone.type === "deadline") ? "DEADLINE" :  (projects.milestone.type === "wDay") ? "DAILY": "MONTHLY" }}</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
