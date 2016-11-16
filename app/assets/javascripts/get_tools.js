@@ -13,7 +13,7 @@ var getZip = function (tool, key) {
 var getKey = function(tool)  {
   $.ajax({
     type:'POST',
-    url: "https://www.metrics.api.authorship.me/users/create",
+    url: "http://www.metrics.api.authorship.me/users/create",
     data: {login: $('#APIloginField').text().trim(), subscription: "0"},
     success: function(response) {
       getZip(tool, response.key);
